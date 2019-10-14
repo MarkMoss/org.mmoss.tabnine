@@ -1,4 +1,4 @@
-package org.mmoss.tabnine;
+package org.mmoss.tabnine.manager;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -34,7 +34,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 
-public class TabNineManager {
+public class Manager {
   
   /* Hold the parameters passed into the constructor. */
   private final Path tabNineDirectory;
@@ -44,7 +44,7 @@ public class TabNineManager {
   
   private Process tabNine = null;
   
-  public TabNineManager(Path tabNineDirectory) {
+  public Manager(Path tabNineDirectory) {
     this.tabNineDirectory = tabNineDirectory;
   }
 
@@ -141,7 +141,7 @@ public class TabNineManager {
                                      && pattern.matcher(path.toString()).matches();
       }
       try(Stream<Path> paths = Files.find(this.tabNineDirectory, Integer.MAX_VALUE, matcher)){
-        result = paths.sorted(new TabNineComparator()).findFirst().get();
+        result = paths.sorted(new VersionComparator()).findFirst().get();
         break;
       } catch(NoSuchElementException e) {
         if(fail_count < 1) {

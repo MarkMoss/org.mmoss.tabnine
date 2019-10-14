@@ -1,20 +1,21 @@
-package org.mmoss.tabnine;
+package org.mmoss.tabnine.manager;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import org.apache.commons.io.FileUtils;
+import org.mmoss.tabnine.manager.Manager;
 
 import junit.framework.TestCase;
 
-public class TabNineManagerTest extends TestCase {
+public class ManagerTest extends TestCase {
 
-  public TabNineManager uut;
+  public Manager uut;
   
   protected void setUp() throws Exception {
     super.setUp();
-    this.uut = new TabNineManager(Paths.get("C:\\Users\\mmoss\\git\\TabNine\\binaries"));
+    this.uut = new Manager(Paths.get("C:\\Users\\mmoss\\git\\TabNine\\binaries"));
   }
 
   protected void tearDown() throws Exception {
@@ -23,7 +24,7 @@ public class TabNineManagerTest extends TestCase {
 
   /* Verifies that normal usage of the one-parameter constructor does not throw an exception. */
   public void testDefaultConstructor1() {
-    new TabNineManager(Paths.get("c:\\foobar"));
+    new Manager(Paths.get("c:\\foobar"));
   }
     
   /* TabNine should return the string "null" for no input. */
@@ -37,7 +38,7 @@ public class TabNineManagerTest extends TestCase {
   /* Test download capability */
   public void testDownload() throws Exception {
     Path temp_path = Files.createTempDirectory(null);
-    TabNineManager local_uut = new TabNineManager(temp_path);
+    Manager local_uut = new Manager(temp_path);
     assertEquals(local_uut.request("{}"), "null");
     local_uut.close();
     /* Try to clean-up...retry for up to ~10 s. The first few tries may fail until the tab

@@ -1,4 +1,4 @@
-package org.mmoss.tabnine;
+package org.mmoss.tabnine.manager;
 
 /**
  * Indicates that the operation failed, and that future operations are likely to fail, due to the

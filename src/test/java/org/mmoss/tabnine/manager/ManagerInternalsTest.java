@@ -1,18 +1,20 @@
-package org.mmoss.tabnine;
+package org.mmoss.tabnine.manager;
 
 import java.lang.reflect.Method;
 import java.nio.file.Paths;
 import java.util.regex.Pattern;
 
+import org.mmoss.tabnine.manager.Manager;
+
 import junit.framework.TestCase;
 
-public class TabNineManagerInternalsTest extends TestCase {
+public class ManagerInternalsTest extends TestCase {
 
-  public TabNineManager uut;
+  public Manager uut;
   
   protected void setUp() throws Exception {
     super.setUp();
-    this.uut = new TabNineManager(Paths.get("C:\\Users\\mmoss\\git\\TabNine\\binaries"));
+    this.uut = new Manager(Paths.get("C:\\Users\\mmoss\\git\\TabNine\\binaries"));
   }
   
   /* Verifies getCurrentTabNineVersion retrieves a legible version. */

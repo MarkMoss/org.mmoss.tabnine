@@ -1,4 +1,4 @@
-package org.mmoss.tabnine;
+package org.mmoss.tabnine.manager;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

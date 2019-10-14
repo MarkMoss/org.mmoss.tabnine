@@ -1,16 +1,18 @@
-package org.mmoss.tabnine;
+package org.mmoss.tabnine.manager;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import org.mmoss.tabnine.manager.VersionComparator;
+
 import junit.framework.TestCase;
 
-public class TabNineComparitorTest extends TestCase {
+public class VersionComparitorTest extends TestCase {
   
-  TabNineComparator uut;
+  VersionComparator uut;
   
   protected void setUp() {
-    this.uut = new TabNineComparator();
+    this.uut = new VersionComparator();
   }
   
   /* Verifies less-than comparison of two typical TabNine windows absolute 
