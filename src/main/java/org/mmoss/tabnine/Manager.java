@@ -1,4 +1,4 @@
-package org.mmoss.tabnine.manager;
+package org.mmoss.tabnine;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

@@ -1,4 +1,4 @@
-package org.mmoss.tabnine.manager;
+package org.mmoss.tabnine;
 
 import java.nio.file.Path;
 import java.util.Comparator;

@@ -1,6 +1,6 @@
-package org.mmoss.tabnine.manager;
+package org.mmoss.tabnine;
 
-import org.mmoss.tabnine.manager.FatalException;
+import org.mmoss.tabnine.FatalException;
 
 import junit.framework.TestCase;
 

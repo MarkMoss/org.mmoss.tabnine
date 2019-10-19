@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.mmoss.tabnine.manager</groupId>
+  <groupId>org.mmoss.tabnine</groupId>
   <version>0.0.2-SNAPSHOT</version>
 
   <name>tabnine</name>
@@ -93,5 +93,5 @@
       </plugin>
     </plugins>
   </reporting>
-  <artifactId>manager</artifactId>
+  <artifactId>tabnine</artifactId>
 </project>

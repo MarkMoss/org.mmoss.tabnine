@@ -1,4 +1,4 @@
-package org.mmoss.tabnine.manager;
+package org.mmoss.tabnine;
 
 public class TabNineException extends RuntimeException {
   /**

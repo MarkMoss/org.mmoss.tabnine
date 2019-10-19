@@ -1,10 +1,10 @@
-package org.mmoss.tabnine.manager;
+package org.mmoss.tabnine;
 
 import java.lang.reflect.Method;
 import java.nio.file.Paths;
 import java.util.regex.Pattern;
 
-import org.mmoss.tabnine.manager.Manager;
+import org.mmoss.tabnine.Manager;
 
 import junit.framework.TestCase;
 

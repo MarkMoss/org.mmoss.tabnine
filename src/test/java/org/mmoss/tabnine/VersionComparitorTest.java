@@ -1,9 +1,9 @@
-package org.mmoss.tabnine.manager;
+package org.mmoss.tabnine;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import org.mmoss.tabnine.manager.VersionComparator;
+import org.mmoss.tabnine.VersionComparator;
 
 import junit.framework.TestCase;
 
