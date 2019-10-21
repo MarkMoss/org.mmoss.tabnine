@@ -1,14 +1,16 @@
 package org.mmoss.tabnine;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
 import org.mmoss.tabnine.BusyException;
 
-import junit.framework.TestCase;
-
-public class BusyExceptionTest extends TestCase {
+public class BusyExceptionTest {
 
   /* Verifies that the parameters passed to the constructor can be retrieved by calling the
    * appropriate methods.
    */
+  @Test
   public void testConstructor() {
     BusyException e = new BusyException("Message", "Request");
     assertEquals(e.getMessage(), "Message");

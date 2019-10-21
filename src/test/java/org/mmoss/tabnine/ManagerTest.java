@@ -1,33 +1,33 @@
 package org.mmoss.tabnine;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import org.apache.commons.io.FileUtils;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.mmoss.tabnine.Manager;
 
-import junit.framework.TestCase;
-
-public class ManagerTest extends TestCase {
+public class ManagerTest{
 
   public Manager uut;
   
+  @BeforeEach
   protected void setUp() throws Exception {
-    super.setUp();
     this.uut = new Manager(Paths.get("C:\\Users\\mmoss\\git\\TabNine\\binaries"));
   }
 
-  protected void tearDown() throws Exception {
-    super.tearDown();
-  }
-
   /* Verifies that normal usage of the one-parameter constructor does not throw an exception. */
+  @Test
   public void testDefaultConstructor1() {
     new Manager(Paths.get("c:\\foobar"));
   }
     
   /* TabNine should return the string "null" for no input. */
+  @Test
   public void testNoInput() throws Throwable {
     /* Also verifies the ability to make multiple requests. */
     assertEquals(this.uut.request("{}"), "null");
@@ -36,6 +36,7 @@ public class ManagerTest extends TestCase {
   }
   
   /* Test download capability */
+  @Test
   public void testDownload() throws Exception {
     Path temp_path = Files.createTempDirectory(null);
     Manager local_uut = new Manager(temp_path);

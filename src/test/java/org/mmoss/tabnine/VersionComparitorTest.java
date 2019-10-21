@@ -3,14 +3,15 @@ package org.mmoss.tabnine;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.mmoss.tabnine.VersionComparator;
 
-import junit.framework.TestCase;
-
-public class VersionComparitorTest extends TestCase {
+public class VersionComparitorTest {
   
   VersionComparator uut;
   
+  @BeforeEach
   protected void setUp() {
     this.uut = new VersionComparator();
   }
@@ -18,6 +19,7 @@ public class VersionComparitorTest extends TestCase {
   /* Verifies less-than comparison of two typical TabNine windows absolute 
    * paths.
    */
+  @Test
   public void testLtAbsWindows() {
     Path p1 = Paths.get("C:",
                         "foobar",
@@ -35,6 +37,7 @@ public class VersionComparitorTest extends TestCase {
   /* Verifies less-than comparison of two typical TabNine posix absolute 
    * paths.
    */
+  @Test
   public void testLtAbsPosix() {
     Path p1 = Paths.get("/",
                         "foobar",
@@ -50,6 +53,7 @@ public class VersionComparitorTest extends TestCase {
   }
 
   /* Verifies equal comparison of two typical TabNine windows absolute paths. */
+  @Test
   public void testEqAbsWindows() {
     Path p1 = Paths.get("C:",
                         "foobar",
@@ -65,6 +69,7 @@ public class VersionComparitorTest extends TestCase {
   }
   
   /* Verifies equal comparison of two typical TabNine posix absolute paths. */
+  @Test
   public void testEqAbsPosix() {
     Path p1 = Paths.get("/",
                         "foobar",
@@ -82,6 +87,7 @@ public class VersionComparitorTest extends TestCase {
   /* Verifies greater than comparison of two typical TabNine windows absolute 
    * paths. 
    */
+  @Test
   public void testGtAbsWindows() {
     Path p1 = Paths.get("C:",
                         "foobar",
@@ -99,6 +105,7 @@ public class VersionComparitorTest extends TestCase {
   /* Verifies greater than comparison of two typical TabNine posix absolute 
    * paths. 
    */
+  @Test
   public void testGtAbsPosix() {
     Path p1 = Paths.get("/",
                         "foobar",
@@ -112,7 +119,4 @@ public class VersionComparitorTest extends TestCase {
                         "tabnine.exe");
     assert(uut.compare(p1, p2) > 0);
   }
-  
-  
-  
 }

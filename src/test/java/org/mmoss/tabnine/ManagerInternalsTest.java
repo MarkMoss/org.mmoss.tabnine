@@ -4,20 +4,21 @@ import java.lang.reflect.Method;
 import java.nio.file.Paths;
 import java.util.regex.Pattern;
 
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.mmoss.tabnine.Manager;
 
-import junit.framework.TestCase;
-
-public class ManagerInternalsTest extends TestCase {
+public class ManagerInternalsTest {
 
   public Manager uut;
   
+  @BeforeEach
   protected void setUp() throws Exception {
-    super.setUp();
     this.uut = new Manager(Paths.get("C:\\Users\\mmoss\\git\\TabNine\\binaries"));
   }
   
   /* Verifies getCurrentTabNineVersion retrieves a legible version. */
+  @Test
   public void test_getCurrentTabNineVersion() throws Exception {
     /* Access private method via reflection. */
     String response;

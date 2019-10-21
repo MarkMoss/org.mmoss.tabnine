@@ -6,26 +6,18 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.FileVisitOption;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributes;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 import java.util.function.BiPredicate;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
-
-import javax.net.ssl.HttpsURLConnection;
 
 import org.apache.commons.lang3.SystemUtils;
 import org.apache.http.HttpEntity;

@@ -1,14 +1,16 @@
 package org.mmoss.tabnine;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
 import org.mmoss.tabnine.FatalException;
 
-import junit.framework.TestCase;
-
-public class FatalExceptionTest extends TestCase {
+public class FatalExceptionTest {
 
   /* Verifies that the parameters passed to the constructor can be retrieved by calling the
    * appropriate methods.
    */
+  @Test
   public void testConstructor() {
     FatalException e = new FatalException("Message", "Request");
     assertEquals(e.getMessage(), "Message");
@@ -16,6 +18,7 @@ public class FatalExceptionTest extends TestCase {
   }
   
   /* Verifies the one-parameter constructor (implied null request) */
+  @Test
   public void testOneParameterConstructor() {
     FatalException e = new FatalException("Message");
     assertEquals(e.getMessage(), "Message");
