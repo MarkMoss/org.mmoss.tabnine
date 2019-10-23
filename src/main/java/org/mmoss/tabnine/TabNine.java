@@ -14,5 +14,12 @@ public class TabNine {
     this.manager = manager;
   }
   
+  public void close() {
+    manager.close();
+  }
+  
+  public AutocompleteResponse Autocomplete(AutocompleteRequest req) throws Exception { 
+    return AutocompleteResponse.fromJson(manager.request(req.Serialize()));
+  }
   
 }
