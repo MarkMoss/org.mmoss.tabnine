@@ -1,4 +1,4 @@
-package org.mmoss.tabnine;
+package org.mmoss.tabninetests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

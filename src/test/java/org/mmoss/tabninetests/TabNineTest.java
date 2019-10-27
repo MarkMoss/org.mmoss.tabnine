@@ -1,4 +1,4 @@
-package org.mmoss.tabnine;
+package org.mmoss.tabninetests;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -10,6 +10,9 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
+import org.mmoss.tabnine.AutocompleteRequest;
+import org.mmoss.tabnine.AutocompleteResponse;
+import org.mmoss.tabnine.TabNine;
 
 /* Setup to use a per-class lifecycle to avoid setup and teardown of TabNine for each test. */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)

@@ -1,10 +1,12 @@
-package org.mmoss.tabnine;
+package org.mmoss.tabninetests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.io.IOException;
 import java.nio.file.Paths;
 
 import org.junit.jupiter.api.Test;
+import org.mmoss.tabnine.AutocompleteRequest;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -15,7 +17,7 @@ public class AutocompleteRequestTest {
   
   /* Verifies that the default constructor returns a request which generates the expected JSON. */
   @Test
-  public void testCreateAutocompleteRequest() throws JsonProcessingException {
+  public void testCreateAutocompleteRequest() throws JsonProcessingException, IOException {
     AutocompleteRequest req = new AutocompleteRequest("before", 
                                                       "after",
                                                       true,

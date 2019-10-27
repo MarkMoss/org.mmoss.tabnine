@@ -1,4 +1,4 @@
-package org.mmoss.tabnine;
+package org.mmoss.tabninetests;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;

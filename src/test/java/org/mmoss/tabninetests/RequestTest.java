@@ -1,8 +1,10 @@
-package org.mmoss.tabnine;
+package org.mmoss.tabninetests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
+import org.mmoss.tabnine.Request;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 public class RequestTest {
