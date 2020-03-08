@@ -120,6 +120,10 @@ public class Manager {
         out.close();
         file.close();
       }
+      /* Mark the newly-downloaded TabNine executable as executable by the
+       * owner only.
+       */
+      download_path.toFile().setExecutable(true, true);
     }
   }
   
@@ -146,7 +150,7 @@ public class Manager {
                                             + getArch()
                                             + "-[^-]+-"
                                             + getOs()
-                                            + "-[^-]*\\\\" + executable + "$");
+                                            + "-[^-]*[\\\\/]" + executable + "$");
         matcher = (path, attr) ->  Files.isRegularFile(path)
                                      && Files.isExecutable(path)
                                      && pattern.matcher(path.toString()).matches();
